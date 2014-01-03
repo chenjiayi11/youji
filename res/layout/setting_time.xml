@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#404a51" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/nav_bar_height" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#3e4750"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="选择旅行日期"
+                android:textColor="@color/pick_date_text"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/setting_time_start_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/setting_time_start_date"
+                    android:paddingLeft="5dp"
+                    android:text="@string/start_date"
+                    android:textColor="@color/pick_date_text"
+                    android:textSize="12sp" />
+                <RelativeLayout 
+                    android:id="@id/setting_time_start_date"
+                    android:layout_width="118dp"
+                    android:layout_height="98dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/setting_time_start_text"
+                    android:background="@drawable/pick_date_bg">
+                    <TextView 
+                        android:id="@+id/setting_time_start_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/set_time_year_size"
+                        android:inputType="none"
+                        android:text="@string/time_for_year"/>
+                    <TextView 
+                        android:id="@+id/setting_time_start_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_below="@id/setting_time_start_year"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/set_time_day_size"
+                        android:inputType="none"
+                        android:text="12-02"/>
+                </RelativeLayout>
+            </RelativeLayout>>
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_vertical" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/setting_time_end_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/setting_time_end_date"
+                    android:paddingLeft="5dp"
+                    android:text="@string/end_date"
+                    android:textColor="@color/pick_date_text"
+                    android:textSize="12sp" />
+                <RelativeLayout 
+                    android:id="@id/setting_time_end_date"
+                    android:layout_width="118dp"
+                    android:layout_height="98dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/setting_time_end_text"
+                    android:background="@drawable/pick_date_bg">
+                    <TextView 
+                        android:id="@+id/setting_time_end_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/set_time_year_size"
+                        android:text="@string/time_for_year"/>
+                    <TextView 
+                        android:id="@+id/setting_time_end_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_below="@id/setting_time_end_year"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/set_time_day_size"
+                        android:text="12-12"/>
+                </RelativeLayout>
+            </RelativeLayout>>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_time_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:background="@color/title_bar_color" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting_time_title"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/setting_time_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:layout_alignParentBottom="true">
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/give_up_button"
+            android:background="@drawable/pick_date_bg"/>
+        <View 
+            android:layout_width="15dp"
+            android:layout_height="match_parent"/>
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+             android:textColor="@color/white"
+            android:text="@string/start_button"
+            android:background="@drawable/pick_date_bg"/>
+    </LinearLayout>
+
+</RelativeLayout>
